@@ -8,9 +8,9 @@ namespace KafeKod.Data
 {
     public class KafeVeri
     {
-        public string Urunler { get; set; }
-        public string AktifSiparisler { get; set; }
-        public string GecmisSiparisler { get; set; }
+        public List<Urun> Urunler { get; set; }
+        public List<Siparis> AktifSiparisler { get; set; }
+        public List<Siparis>  GecmisSiparisler { get; set; }
        
     }
 }
