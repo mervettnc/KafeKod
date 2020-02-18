@@ -10,11 +10,17 @@ namespace KafeKod.Data
     public enum SiparisDurum { Aktif,Odendi,Iptal}
     public class Siparis
     {
+        public Siparis ()  //ctor
+        {
+            SiparisDetaylar = new List<SiparisDetay>();
+
+        }
         public int MasaNo { get; set; }
         public DateTime? AcilisZamani { get; set; }
         public DateTime? KapanisZamani { get; set; }
-        public SiparisDurum? Durum { get; set; }
+        public SiparisDurum Durum { get; set; }
         public List<SiparisDetay> SiparisDetaylar {get; set;}
+        public decimal OdenenTutar { get; set; }
 
         //public string ToplamTutarTL => string.Format("{0:0.00}₺", ToplamTutar()); //alttakinin muadili
         public string ToplamTutarTL { get { return string.Format("{0:0.00}₺", ToplamTutar()); } }
