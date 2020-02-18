@@ -128,9 +128,6 @@
             this.cboMasaNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboMasaNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMasaNo.FormattingEnabled = true;
-            this.cboMasaNo.Items.AddRange(new object[] {
-            "çay - 2.00 ₺",
-            "kahve -4.00 ₺"});
             this.cboMasaNo.Location = new System.Drawing.Point(483, 26);
             this.cboMasaNo.Name = "cboMasaNo";
             this.cboMasaNo.Size = new System.Drawing.Size(160, 21);

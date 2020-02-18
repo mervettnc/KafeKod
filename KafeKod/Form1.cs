@@ -81,14 +81,22 @@ namespace KafeKod
                 SiparisForm frmSiparis = new SiparisForm(db,sip);
                 frmSiparis.ShowDialog();
 
-                if (sip.Durum != SiparisDurum.Aktif)  //masayı temizleme
+                if (sip.Durum == SiparisDurum.Odendi || sip.Durum==SiparisDurum.Iptal)  //masayı temizleme 
                 {
                     lvi.Tag = sip.MasaNo;
                     lvi.ImageKey = "bos";
+                    db.AktifSiparisler.Remove(sip);
+                    db.GecmisSiparisler.Add(sip);
 
                 }
 
             }
+        }
+
+        private void tsmiGecmisSiparisler_Click(object sender, EventArgs e)
+        {
+            var frm = new GecmisSiparislerForm(db);
+            frm.ShowDialog();
         }
     }
 }
