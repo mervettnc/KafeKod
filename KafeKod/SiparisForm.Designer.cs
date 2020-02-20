@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nudAdet = new System.Windows.Forms.NumericUpDown();
@@ -43,15 +44,18 @@
             this.btnAnasayfa = new System.Windows.Forms.Button();
             this.lblTutar = new System.Windows.Forms.Label();
             this.cboUrun = new System.Windows.Forms.ComboBox();
+            this.cmsSiparisDetay = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiSiparirisSil = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSiparisDetay)).BeginInit();
+            this.cmsSiparisDetay.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(12, 11);
+            this.label1.Location = new System.Drawing.Point(12, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 16);
             this.label1.TabIndex = 0;
@@ -61,7 +65,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(156, 9);
+            this.label2.Location = new System.Drawing.Point(156, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 1;
@@ -69,7 +73,7 @@
             // 
             // nudAdet
             // 
-            this.nudAdet.Location = new System.Drawing.Point(159, 28);
+            this.nudAdet.Location = new System.Drawing.Point(159, 67);
             this.nudAdet.Minimum = new decimal(new int[] {
             1,
             0,
@@ -87,7 +91,7 @@
             // btnEkle
             // 
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(298, 25);
+            this.btnEkle.Location = new System.Drawing.Point(298, 64);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(75, 23);
             this.btnEkle.TabIndex = 4;
@@ -105,19 +109,20 @@
             this.dgvSiparisDetay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSiparisDetay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSiparisDetay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSiparisDetay.Location = new System.Drawing.Point(15, 55);
+            this.dgvSiparisDetay.Location = new System.Drawing.Point(15, 94);
             this.dgvSiparisDetay.Name = "dgvSiparisDetay";
             this.dgvSiparisDetay.ReadOnly = true;
             this.dgvSiparisDetay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSiparisDetay.Size = new System.Drawing.Size(446, 445);
+            this.dgvSiparisDetay.Size = new System.Drawing.Size(446, 444);
             this.dgvSiparisDetay.TabIndex = 5;
+            this.dgvSiparisDetay.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvSiparisDetay_MouseClick);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(480, 7);
+            this.label3.Location = new System.Drawing.Point(480, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 6;
@@ -128,7 +133,7 @@
             this.cboMasaNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboMasaNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMasaNo.FormattingEnabled = true;
-            this.cboMasaNo.Location = new System.Drawing.Point(483, 26);
+            this.cboMasaNo.Location = new System.Drawing.Point(483, 65);
             this.cboMasaNo.Name = "cboMasaNo";
             this.cboMasaNo.Size = new System.Drawing.Size(160, 21);
             this.cboMasaNo.TabIndex = 7;
@@ -137,12 +142,13 @@
             // 
             this.bntMasaTasi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bntMasaTasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bntMasaTasi.Location = new System.Drawing.Point(649, 24);
+            this.bntMasaTasi.Location = new System.Drawing.Point(649, 63);
             this.bntMasaTasi.Name = "bntMasaTasi";
             this.bntMasaTasi.Size = new System.Drawing.Size(56, 24);
             this.bntMasaTasi.TabIndex = 8;
             this.bntMasaTasi.Text = "TAŞI";
             this.bntMasaTasi.UseVisualStyleBackColor = true;
+            this.bntMasaTasi.Click += new System.EventHandler(this.bntMasaTasi_Click);
             // 
             // lblMasaNo
             // 
@@ -150,9 +156,9 @@
             this.lblMasaNo.BackColor = System.Drawing.Color.Tomato;
             this.lblMasaNo.Font = new System.Drawing.Font("Broadway", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMasaNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMasaNo.Location = new System.Drawing.Point(471, 55);
+            this.lblMasaNo.Location = new System.Drawing.Point(471, 94);
             this.lblMasaNo.Name = "lblMasaNo";
-            this.lblMasaNo.Size = new System.Drawing.Size(238, 174);
+            this.lblMasaNo.Size = new System.Drawing.Size(238, 135);
             this.lblMasaNo.TabIndex = 9;
             this.lblMasaNo.Text = "08";
             this.lblMasaNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -162,7 +168,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(500, 306);
+            this.label5.Location = new System.Drawing.Point(500, 325);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 16);
             this.label5.TabIndex = 10;
@@ -174,7 +180,7 @@
             this.bntSiparisIptal.BackColor = System.Drawing.Color.DarkRed;
             this.bntSiparisIptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bntSiparisIptal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bntSiparisIptal.Location = new System.Drawing.Point(467, 372);
+            this.bntSiparisIptal.Location = new System.Drawing.Point(467, 410);
             this.bntSiparisIptal.Name = "bntSiparisIptal";
             this.bntSiparisIptal.Size = new System.Drawing.Size(115, 61);
             this.bntSiparisIptal.TabIndex = 11;
@@ -188,7 +194,7 @@
             this.btnOdemeAl.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnOdemeAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnOdemeAl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnOdemeAl.Location = new System.Drawing.Point(587, 372);
+            this.btnOdemeAl.Location = new System.Drawing.Point(587, 410);
             this.btnOdemeAl.Name = "btnOdemeAl";
             this.btnOdemeAl.Size = new System.Drawing.Size(118, 61);
             this.btnOdemeAl.TabIndex = 12;
@@ -202,7 +208,7 @@
             this.btnAnasayfa.BackColor = System.Drawing.Color.DimGray;
             this.btnAnasayfa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAnasayfa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAnasayfa.Location = new System.Drawing.Point(467, 439);
+            this.btnAnasayfa.Location = new System.Drawing.Point(467, 477);
             this.btnAnasayfa.Name = "btnAnasayfa";
             this.btnAnasayfa.Size = new System.Drawing.Size(238, 61);
             this.btnAnasayfa.TabIndex = 13;
@@ -215,7 +221,7 @@
             this.lblTutar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblTutar.AutoSize = true;
             this.lblTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTutar.Location = new System.Drawing.Point(619, 306);
+            this.lblTutar.Location = new System.Drawing.Point(619, 325);
             this.lblTutar.Name = "lblTutar";
             this.lblTutar.Size = new System.Drawing.Size(48, 16);
             this.lblTutar.TabIndex = 14;
@@ -225,16 +231,31 @@
             // 
             this.cboUrun.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUrun.FormattingEnabled = true;
-            this.cboUrun.Location = new System.Drawing.Point(12, 28);
+            this.cboUrun.Location = new System.Drawing.Point(12, 67);
             this.cboUrun.Name = "cboUrun";
             this.cboUrun.Size = new System.Drawing.Size(121, 21);
+            this.cboUrun.Sorted = true;
             this.cboUrun.TabIndex = 15;
+            // 
+            // cmsSiparisDetay
+            // 
+            this.cmsSiparisDetay.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiSiparirisSil});
+            this.cmsSiparisDetay.Name = "cmsSiparisDetay";
+            this.cmsSiparisDetay.Size = new System.Drawing.Size(87, 26);
+            // 
+            // tsmiSiparirisSil
+            // 
+            this.tsmiSiparirisSil.Name = "tsmiSiparirisSil";
+            this.tsmiSiparirisSil.Size = new System.Drawing.Size(86, 22);
+            this.tsmiSiparirisSil.Text = "Sil";
+            this.tsmiSiparirisSil.Click += new System.EventHandler(this.tsmiSiparirisSil_Click);
             // 
             // SiparisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 512);
+            this.ClientSize = new System.Drawing.Size(717, 550);
             this.Controls.Add(this.cboUrun);
             this.Controls.Add(this.lblTutar);
             this.Controls.Add(this.btnAnasayfa);
@@ -255,6 +276,7 @@
             this.Text = "SiparisForm";
             ((System.ComponentModel.ISupportInitialize)(this.nudAdet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSiparisDetay)).EndInit();
+            this.cmsSiparisDetay.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +299,7 @@
         private System.Windows.Forms.Button btnAnasayfa;
         private System.Windows.Forms.Label lblTutar;
         private System.Windows.Forms.ComboBox cboUrun;
+        private System.Windows.Forms.ContextMenuStrip cmsSiparisDetay;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSiparirisSil;
     }
 }
