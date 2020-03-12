@@ -13,13 +13,13 @@ namespace KafeKod
 {
     public partial class SiparisForm : Form
     {
-        private KafeVeri db;
+        private KafeContext db;
         private Siparis siparis;
         BindingList<SiparisDetay> blSiparisDetaylar;
 
         public event EventHandler<MasaTasimaEventArgs> MasaTasiniyor;
 
-        public SiparisForm(KafeVeri kafeVeri, Siparis siparis)
+        public SiparisForm(KafeContext kafeVeri, Siparis siparis)
         {
             db = kafeVeri;
             this.siparis = siparis;
